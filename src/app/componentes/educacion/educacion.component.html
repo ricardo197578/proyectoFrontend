@@ -1,0 +1,20 @@
+<p>educacion works!</p>
+<div class="container mt-5">
+    <h2>Educación</h2>
+  
+    <!-- Botones de acción (mostrados solo si el usuario está logeado) -->
+    <div *ngIf="usuarioLogeado">
+      <button class="btn btn-primary" (click)="crearEducacion()">Crear Educación</button>
+      <button class="btn btn-success" (click)="actualizarEducacion()">Guardar Educación</button>
+      <button class="btn btn-danger" (click)="eliminarEducacion(educacionSeleccionada?.id)" *ngIf="educacionSeleccionada">Eliminar Educación</button>
+    </div>
+  
+    <!-- Lista de educaciones -->
+    <ul class="list-group mt-3">
+      <li class="list-group-item" *ngFor="let educacion of educaciones">
+        <!-- Aquí muestra los detalles de la educación, por ejemplo: -->
+        {{ educacion.titulo }}
+      </li>
+    </ul>
+  </div>
+  

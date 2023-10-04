@@ -1,31 +1,30 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Educacion } from 'src/app/model/educacion.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EducacionService {
-
-  constructor() { }
-}
-
-/////////
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Educacion }  from './educacion.model';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class PersonaService {
-  private baseUrl = 'http://localhost:8080/api/educacion/'; // Reemplaza 'URL_DEL_BACKEND' con la URL de tu backend
+  private baseUrl = 'http://localhost:8080/api/educacion/';
 
   constructor(private http: HttpClient) {}
 
-  getPersonas(): Observable<Persona[]> {
-    return this.http.get<Persona[]>(`${this.baseUrl}`);
+  getPersonas(): Observable<Educacion[]> {
+    return this.http.get<Educacion[]>(`${this.baseUrl}`);
   }
 
-  // Agrega métodos para crear, actualizar y eliminar personas según tus necesidades
+  crearEducacion(educacion: Educacion): Observable<Educacion> {
+    return this.http.post<Educacion>(`${this.baseUrl}`, educacion);
+  }
+
+  actualizarEducacion(id: number, educacion: Educacion): Observable<Educacion> {
+    return this.http.put<Educacion>(`${this.baseUrl}/${id}`, educacion);
+  }
+
+  eliminarEducacion(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/${id}`);
+  }
 }
 
