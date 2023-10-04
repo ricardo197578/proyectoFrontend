@@ -4,16 +4,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { PersonaComponent } from './persona/persona.component';
+import { PersonaComponent } from './componentes/persona/persona.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PersonaService } from './persona.service';
- 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonaComponent
-    // Agrega aquí otros componentes si es necesario
+    PersonaComponent,
+        // Agrega aquí otros componentes si es necesario
   ],
   imports: [
     BrowserModule,
