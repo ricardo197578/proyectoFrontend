@@ -1,11 +1,11 @@
 .background-image {
   background-image: url('/assets/robot.jpg'); /* Reemplaza con la ruta de tu imagen de fondo */
-  background-size: contain;
+  background-size: cover;/*cambio contain x cover
   background-repeat: no-repeat;
-  background-attachment: fixed;
+ /* background-attachment: fixed;*/
   background-position: center;
   color: white; /* Color del texto */
-  padding: 20px;
+ padding: 20px;
   text-align: center;
   min-height: 80vh; /* Ajusta la altura a la altura de la ventana */
 }

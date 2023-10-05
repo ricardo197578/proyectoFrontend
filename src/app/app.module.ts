@@ -8,12 +8,14 @@ import { PersonaComponent } from './componentes/persona/persona.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PersonaService } from './persona.service';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
+import { BanerComponent } from './componentes/baner/baner/baner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonaComponent,
     EducacionComponent,
+    BanerComponent,
         // Agrega aquí otros componentes si es necesario
   ],
   imports: [

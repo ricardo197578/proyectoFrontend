@@ -1,0 +1,21 @@
+.background-image {
+  background-image: url('/assets/Educacionjpg'); /* Reemplaza con la ruta de tu imagen de fondo */
+  background-size: contain;
+  background-repeat: no-repeat;
+/*  background-attachment: fixed;*/
+  background-position: center;
+  color: black; /* Color del texto */
+  padding: 20px;
+  text-align: center;
+  height: 100vh; /* Cambié min-height a height para ocupar toda la altura */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde */
+  position: relative; /* Añadido para z-index si es necesario */
+}
+
+.list-group-item {
+  background: rgba(255, 255, 255, 0.7); /* Establece un fondo semi-transparente */
+  margin-top: 10px; /* Espacio entre elementos de la lista */
+  border: none !important; /* Elimina el borde si es necesario */
+}
+
+

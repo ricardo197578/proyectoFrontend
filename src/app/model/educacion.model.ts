@@ -1,8 +1,8 @@
 export class Educacion {
     id!: number;
-    titulo!: string;
+    fechaDeEgreso!:string;
     institucion!: string;
-    fechaDeNacimiento!:string;
+    titulo!:string;
   }
 
 
